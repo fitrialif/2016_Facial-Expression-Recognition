@@ -1,0 +1,3 @@
+IIn order to run the program, 1)Theano and 2)Keras library are required to be installed. 
+Also, in order to run the program more efficiently, it is recommended to install 3) Nvidia¡¯s GPU-programming toolchain (CUDA) and configure Theano to run the program on GPU.
+In fact, we also use a local python IDE 4) Spyder to work more easily.

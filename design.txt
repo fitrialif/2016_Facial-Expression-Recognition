@@ -1,0 +1,32 @@
+Convolutional Neural Networks are variants of multilayer perceptrons. They are widely used in image recognition since it has many advantages in dealing with images. They are rugged to image distortion and shifts, take less memory, and is easier to train. Therefore, in our facial expression recognition program, we implemented a CNN to realize our purpose. And we used Python as our programming language because it is very convenient for machine learning projects and it also has many powerful and useful libraries.
+
+The process of our facial expression recognition program contains two parts: training CNN and using CNN.
+
+1. Training CNN
+
+In our program, we get the training data from Kaggle website. There are around 36000 preprocessed, labled gray-scale images (size 48 ¡Á 48) inside the dataset.
+
+We use Keras, a popular high-level neural networks library, to implement our CNN. We chose it because it is more concise and easier to use than other popular libraries such as Tensorflow and Theano.
+
+The architecture of our CNN contains two convolutional and maxpooling layers, one fully-connected layer and a classifier: 
+(Convolution layer - ReLU function - Maxpooling) - (Convolution layer - ReLU function - Maxpooling - Dropout) - (Fully-connected layer - ReLU function - Dropout) - (Classifier- Softmax function).
+
+When choosing the architecture, we tried different structures such as three or four convolutional layers and two or three fully-connected layers. The result turned out to be that the current architecture has a good performance with relatively short time. Adding more layers would cause long training time, and the performance is very close to shallower ones. Since the accuracy rate of the current model is acceptable, we choose to use it as our final architecture. Meanwhile, in order to reduce the overfitting, we added dropout into our CNN. 
+
+In the training process, we use 31500 images to train our model and 3500 images to test.
+
+After training, we save our model into model.h5. It contains the architecture, weights, training configuration of the model, allowing us to use it in another python file in the future.
+
+2. Using CNN
+
+In this part, we can analysis the expression of given pictures of a human face.
+
+In order to use this file, we need to take our own pictures or download one from the website.
+
+In UseCNN.py, we implement a method that can get pictures, turn them into 48 ¡Á 48 gray-scale images, transfer the pixels into digits and store them in a numpy array. Then we pass the values to the trained model, and get the prediction of the facial expression of this image. 
+
+
+
+
+
+

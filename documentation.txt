@@ -1,0 +1,11 @@
+In this project, we built a convolutional neural network (CNN) for facial expression detection. We trained the model with a dataset from Kaggle website.
+
+The folder contains 6 files (or folder): fer2013.csv, TrainCNN.py, model.h5, UseCNN.py, and a folder named image.
+1) 'fer2013.csv' is the dataset, which contains around 37000 pictures of the following 7 facial expressions: 0=Angry, 1=Disgust, 2=Fear, 3=Happy, 4=Sad, 5=Surprise, 6=Neutral.
+2) 'TrainCNN.py' is where we load and reshape the data from fer2013.csv, build the CNN, and trained the model with the data. You do not need to run this file because we have already trained the model and save it in the folder as model.h5. If you want to look at how we implement the CNN, before you run the file, be sure to change ¡®nb_epoch¡¯ to a smaller number such as 10, and ¡®val_size¡¯ to 100, so that it wouldn¡¯t take you too long to train the model.
+3) 'model.h5' is the ready-to-use model we already trained.
+4) 'UseCNN.py' is where we use the model to predict any given picture.
+5) 'image' is a folder to which you can add your own pictures.
+6) 'accuracy.txt¡¯ is the training log of the model, and shows the accuracy of the models throughout out the training.
+
+In short, to run the program to recognize facial expression, you simply 1) add a picture (jpg format) to the folder and 2) run 'UseCNN.py'.
